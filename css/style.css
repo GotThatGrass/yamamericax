@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Imperial+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 2rem;
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "EB Garamond", serif;
+    text-align: center;
+}
+
+em {
+    font-family: "Imperial Script", cursive;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Playfair Display", serif;
+}
+
+h1 {
+    margin-top: 60px;
+    font-size: 3rem;
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+h3 {
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+h4 {
+    font-weight: 400;
+}
+
+p {
+    font-family: "EB Garamond", serif;
+    text-align: justify;
+}
+
+.motto {
+    font-size: 2rem;
+    margin: 2.5rem 0 1.5rem 0;
+    font-family: "EB Garamond", serif;
+    font-style: italic;
+}
+
+.intro {
+    text-align: justify;
+}
+
+nav {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #000;
+  letter-spacing: 0.5px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  padding-bottom: 0.75rem;
+}
+
+section {
+  padding: 2rem;
+  margin: 3rem 0;
+  border: 1px solid #D2D2D2;
+  border-radius: 6px;
+  background: #F7F7F7;
+}
+
+section h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+#toggleSidebar {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background: #F7F7F7;
+    color: black;
+    cursor: pointer;
+    z-index: 2000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+#toggleSidebar.open {
+    transform: rotate(180deg);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;  
+    width: 250px;
+    height: 100vh;
+    background-color: #F7F7F7;
+    border: 1px solid #D2D2D2;
+    color: #fff;
+    padding: 60px 20px;
+    transition: left 0.3s ease;
+    z-index: 1500;   
+    overflow-y: auto;
+    text-align: left;
+}
+
+.sidebar.open {
+    left: 0; 
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+#main {
+    padding: 16px;
+    margin-bottom: 120px;
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  
+  background: #EFEFEF;
+  border-top: 2px solid #aaa;
+  
+  color: #000;
+  font-family: "Playfair Display", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+  
+  text-align: center;
+  padding: 0.75rem 0;
+  
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  font-size: 20px;
+  padding: 8px 12px;
+  background: #F7F7F7;
+  border: 1px solid #D2D2D2;
+  cursor: pointer;
+  border-radius: 6px;
+  display: none;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  font-family: "Playfair Display", serif;
+}
