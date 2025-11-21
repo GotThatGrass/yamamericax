@@ -8,6 +8,33 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+      .enter-button {
+        display: inline-block;
+        margin: 2rem auto;
+        padding: 0.75rem 2rem;
+        font-family: "Playfair Display", serif;
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        color: #083a89;
+        
+        background: white;
+        border: 2px solid #5b0e0e;
+        border-radius: 8px;
+
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      /* Hover effect */
+      .enter-button:hover {
+        background: #bfd3fd;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+      }
+
+    </style>
   </head>
 
   <body id="body-home">
@@ -131,7 +158,7 @@
       </section>
     </main>
 
-    <button id="backToTop">↑</button>
+    <a class="enter-button" href="indexother.html">Leave</a>
 
     <footer class="footer">
       <img src="images/af4ffa51c4bbd612e05e8a0f26cba27f5c-shrek.rsquare.w400.webp" alt="Image of Daniel Chen" class="footer-logo">

@@ -1,7 +1,12 @@
 const enterButton = document.getElementById("enter");
+const leaveButton = document.getElementById("leave");
 
 enterButton.addEventListener('click', function() {
     window.location.href = "home.html";
+})
+
+leaveButton.addEventListener('click', function() {
+    window.location.href = "indexother.html";
 })
 
 const backToTop = document.getElementById("backToTop");
