@@ -153,7 +153,7 @@ section h3 {
 
 
 .footer {
-  position: static;   /* or just remove this line entirely */
+  position: static;
   width: 100%;
   background: #EFEFEF;
   border-top: 2px solid #aaa;
@@ -173,6 +173,24 @@ section h3 {
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-logo {
+    height: 80px;
+    width: auto;
+    border-radius: 50px;
+    border: 2px solid #000;
+}
+
+.footer-content {
+    text-align: center;
 }
 
 #backToTop {
@@ -217,8 +235,8 @@ div.gallery-item div.desc {
 }
 
 .bible {
-  counter-reset: line; /* Reset line counter at start */
-  padding-left: 2.5rem; /* space for numbers */
+  counter-reset: line; 
+  padding-left: 2.5rem;
   font-family: 'Courier New', serif;
   background: #F7F7F7;
   border: 1px solid #D2D2D2;
@@ -228,15 +246,15 @@ div.gallery-item div.desc {
 
 .bible p {
   position: relative;
-  counter-increment: line; /* increment for each paragraph */
+  counter-increment: line; 
   margin: 0.8em 0;
-  padding-left: 1rem; /* space between number and text */
+  padding-left: 1rem; 
 }
 
 .bible p::before {
   content: counter(line);
   position: absolute;
-  left: -2rem; /* place number in left margin */
+  left: -2rem; 
   color: var(--secondary);
   font-weight: bold;
   font-family: 'Courier New', serif;
@@ -248,15 +266,16 @@ div.gallery-item div.desc {
   font-family: serif;
 }
 
-/* Mimic a table without borders */
 .row {
   display: flex;
   gap: 1.5rem;
-  margin-left: 0;   /* removes the big indent problem */
+  margin-left: 0;  
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 .cell {
-  min-width: 6rem;   /* controls column width */
+  min-width: 2rem;   
   font-family: "Courier New", monospace;
 }
 
