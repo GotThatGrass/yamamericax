@@ -1,24 +1,93 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Yamamericax</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <h1>Welcome to Yamamericax</h1>
-        <h2>All hail KING PWATCHIDWAX</h2>
-        <p id="population">Population: 4</p>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to Yamamericax</title>
+    <meta name="description" content="Entrance to the world of Yamamericax">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <p><span class="motto"><em>Paxida, Paxidoo</em></span><br>"Shell Above, Shell Within"</p>
-        
-        <p class="intro">Welcome to Yamamericax, proud homeland of King Pwatchidwax, the Sky Turtle.
-            Let us gaze upward in devotion, and shower Him with yams and apples. Paxida, Paxidoo.</p>
-        
-        <button id="enter">Enter</button>
-    </body>
-    <script src="js/script.js" async defer></script>
+    <style>
+      #index-body {
+        margin: 0;
+        padding: 0;
+        background: #dfe6f5;
+        font-family: "Arial", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .welcome-sign {
+        background: #083a89;
+        color: white;
+        border: 8px solid white;
+        border-radius: 20px;
+        padding: 40px 60px;
+        text-align: center;
+        width: 500px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      }
+
+      .welcome-sign h1 {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .welcome-sign h2 {
+        margin: 10px 0 5px 0;
+        font-size: 3rem;
+        font-weight: 700;
+      }
+
+      .welcome-sign .motto {
+        font-size: 1rem;
+        font-style: italic;
+        opacity: 0.9;
+        margin-bottom: 20px;
+      }
+
+      .welcome-sign .details {
+        font-size: 0.9rem;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .enter-button {
+        margin-top: 30px;
+        display: inline-block;
+        background: white;
+        color: #083a89;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 6px;
+      }
+
+      .enter-button:hover {
+        background: #bfd3fd;
+      }
+    </style>
+  </head>
+
+  <body id="body-index">
+    <div class="welcome-sign">
+      <h1>Welcome To</h1>
+      <h2>YAMAMERICAX</h2>
+
+      <div class="motto">“Paxida Paxidoo”</div>
+
+      <div class="details">
+        <div>Population: 4</div>
+        <div>Est. 1984</div>
+      </div>
+
+      <a class="enter-button" href="home.html">Enter</a>
+    </div>
+  </body>
 </html>

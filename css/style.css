@@ -10,17 +10,13 @@ body {
     text-align: center;
 }
 
-em {
-    font-family: "Imperial Script", cursive;
-}
-
 h1, h2, h3, h4 {
     font-family: "Playfair Display", serif;
 }
 
 h1 {
     margin-top: 60px;
-    font-size: 3rem;
+    font-size: 32px;
 }
 
 h2 {
@@ -45,10 +41,8 @@ p {
 }
 
 .motto {
+    font-family: "Imperial Script", cursive;  
     font-size: 2rem;
-    margin: 2.5rem 0 1.5rem 0;
-    font-family: "EB Garamond", serif;
-    font-style: italic;
 }
 
 .intro {
@@ -159,22 +153,16 @@ section h3 {
 
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  position: static;   /* or just remove this line entirely */
   width: 100%;
-  
   background: #EFEFEF;
   border-top: 2px solid #aaa;
-  
   color: #000;
   font-family: "Playfair Display", serif;
   font-size: 0.9rem;
   letter-spacing: 0.3px;
-  
   text-align: center;
   padding: 0.75rem 0;
-  
   box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
 }
 
@@ -200,4 +188,103 @@ section h3 {
   display: none;
   box-shadow: 0 0 6px rgba(0,0,0,0.1);
   font-family: "Playfair Display", serif;
+}
+
+div.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+div.gallery-item {
+  margin: 5px;
+  border: 1px solid #ccc;
+  width: 180px;
+}
+
+div.gallery-item:hover {
+  border: 1px solid #777;
+}
+
+div.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+
+div.gallery-item div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.bible {
+  counter-reset: line; /* Reset line counter at start */
+  padding-left: 2.5rem; /* space for numbers */
+  font-family: 'Courier New', serif;
+  background: #F7F7F7;
+  border: 1px solid #D2D2D2;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.bible p {
+  position: relative;
+  counter-increment: line; /* increment for each paragraph */
+  margin: 0.8em 0;
+  padding-left: 1rem; /* space between number and text */
+}
+
+.bible p::before {
+  content: counter(line);
+  position: absolute;
+  left: -2rem; /* place number in left margin */
+  color: var(--secondary);
+  font-weight: bold;
+  font-family: 'Courier New', serif;
+}
+
+.example {
+  margin-bottom: 2rem;
+  text-align: left;
+  font-family: serif;
+}
+
+/* Mimic a table without borders */
+.row {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: 0;   /* removes the big indent problem */
+}
+
+.cell {
+  min-width: 6rem;   /* controls column width */
+  font-family: "Courier New", monospace;
+}
+
+.gloss .cell {
+  font-style: italic;
+  color: #444;
+}
+
+.translation {
+  margin-top: 0.3rem;
+  font-style: italic;
+  margin-left: 0;
+}
+
+.examples {
+  counter-reset: ex;
+}
+
+.example {
+  counter-increment: ex;
+  position: relative;
+  padding-left: 2.2rem;
+}
+
+.example::before {
+  content: "(" counter(ex) ")";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
 }
